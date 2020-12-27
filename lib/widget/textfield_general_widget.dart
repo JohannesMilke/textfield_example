@@ -18,6 +18,13 @@ class _TextfieldGeneralWidgetState extends State<TextfieldGeneralWidget> {
 
     emailController.addListener(() => setState(() {}));
   }
+  
+  @override
+  void dispose() {
+    emailController.dispose();
+    numberController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => Center(
